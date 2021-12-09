@@ -1,0 +1,6 @@
+{
+  "*.{js,jsx}": "npm run-script lint",
+  "src/**/*.{ts,tsx}": ["tsc-files", "npm run-script lint"],
+  "stories/**/*.{ts,tsx}": ["tsc-files", "npm run-script lint"],
+  "*": "npm run-script prettier:format"
+}

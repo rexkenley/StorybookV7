@@ -1,0 +1,42 @@
+{
+  "extends": [
+    "airbnb-typescript-prettier",
+    "plugin:react/jsx-runtime",
+    "plugin:storybook/recommended"
+  ],
+  "ignorePatterns": ["**/*.config.js"],
+  "overrides": [
+    {
+      "files": ["**/?(*.)+(spec|test).[jt]s?(x)"],
+      "extends": [
+        "plugin:jest/recommended",
+        "plugin:jest/style",
+        "plugin:jest-dom/recommended",
+        "plugin:testing-library/react"
+      ],
+      "rules": {
+        "jest-dom/prefer-empty": "off",
+        "jest-dom/prefer-in-document": "warn",
+        "testing-library/no-node-access": "warn"
+      }
+    }
+  ],
+  "rules": {
+    "@typescript-eslint/ban-ts-comment": "warn",
+    "@typescript-eslint/no-empty-function": "warn",
+    "@typescript-eslint/no-shadow": "warn",
+    "import/no-extraneous-dependencies": "off",
+    "no-empty-function": "off",
+    "no-unused-expressions": [
+      "error",
+      { "allowShortCircuit": true, "allowTernary": true }
+    ],
+    "one-var": ["warn", "always"],
+    "react-hooks/exhaustive-deps": "warn",
+    "react-hooks/rules-of-hooks": "error",
+    "react/jsx-props-no-spreading": "off",
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off",
+    "strict": ["error", "never"]
+  }
+}

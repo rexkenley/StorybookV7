@@ -1,0 +1,9 @@
+coverage/
+lib/
+node_modules/
+storybook-static/
+
+.npmrc
+.jest-test-results.json
+.lib.stats.html
+cobertura-coverage.xml

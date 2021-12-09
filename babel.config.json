@@ -1,0 +1,37 @@
+{
+  "sourceType": "unambiguous",
+  "env": {
+    "test": {
+      "plugins": ["@babel/plugin-transform-runtime"]
+    }
+  },
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "shippedProposals": true,
+        "loose": true
+      }
+    ],
+    ["@babel/preset-react", { "runtime": "automatic" }],
+    "@babel/preset-typescript"
+  ],
+  "plugins": [
+    [
+      "@babel/plugin-proposal-decorators",
+      {
+        "legacy": true
+      }
+    ],
+    "@babel/plugin-proposal-export-default-from",
+    "babel-plugin-macros",
+    [
+      "babel-plugin-polyfill-corejs3",
+      {
+        "method": "usage-global",
+        "absoluteImports": "core-js",
+        "version": "3.19.3"
+      }
+    ]
+  ]
+}
