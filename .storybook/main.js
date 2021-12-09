@@ -13,8 +13,8 @@ module.exports = {
     builder: "webpack5"
   },
   features: {
-    babelModeV7: true
-    //storyStoreV7: true
+    babelModeV7: true,
+    storyStoreV7: true
   },
   framework: "@storybook/react"
 };
